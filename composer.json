@@ -1,11 +1,11 @@
 {
     "name": "ventureapp/slack-laravel",
-    "description": "Laravel 4 and 5 integration for the maknz/slack package, including facades and service providers.",
+    "description": "Laravel 4 and 5 integration for the VentureApp/slack package, including facades and service providers.",
     "keywords": ["slack", "laravel"],
     "license": "BSD-2-Clause",
     "authors": [
         {
-            "name": "maknz",
+            "name": "VentureApp",
             "email": "github@mak.geek.nz"
         }
     ],
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Maknz\\Slack\\Laravel\\": "src/"
+            "VentureApp\\Slack\\Laravel\\": "src/"
         }
     },
     "minimum-stability": "stable"

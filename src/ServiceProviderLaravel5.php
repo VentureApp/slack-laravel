@@ -1,8 +1,8 @@
 <?php
 
-namespace Maknz\Slack\Laravel;
+namespace VentureApp\Slack\Laravel;
 
-use Maknz\Slack\Client as Client;
+use VentureApp\Slack\Client as Client;
 use GuzzleHttp\Client as Guzzle;
 
 class ServiceProviderLaravel5 extends \Illuminate\Support\ServiceProvider
@@ -26,7 +26,7 @@ class ServiceProviderLaravel5 extends \Illuminate\Support\ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/config/config.php', 'slack');
 
-        $this->app->singleton('maknz.slack', function($app) {
+        $this->app->singleton('VentureApp.slack', function($app) {
             return new Client(
                 $app['config']->get('slack.endpoint'),
                 [
@@ -43,6 +43,6 @@ class ServiceProviderLaravel5 extends \Illuminate\Support\ServiceProvider
             );
         });
 
-        $this->app->bind('Maknz\Slack\Client', 'maknz.slack');
+        $this->app->bind('VentureApp\Slack\Client', 'VentureApp.slack');
     }
 }
